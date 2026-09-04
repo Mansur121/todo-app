@@ -30,6 +30,10 @@ public class TodoController {
         return todoRepository.findByUsername(username); // only your todos
     }
 
+    @GetMapping("/mansur")
+    public String hello() {
+        return "Hello, Mansur!";
+    }
     // ─── CREATE TODO ──────────────────────────────────────────
     @PostMapping
     public Todo createTodo(@RequestBody Todo request) {
