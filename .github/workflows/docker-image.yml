@@ -37,7 +37,7 @@ jobs:
     - name: ssh and deploy to EC2
       uses: appleboy/ssh-action@v1
       with:
-        host: "foo.com:1234,bar.com:5678"
+        host: ${{ secrets.EC2_HOST }}
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
